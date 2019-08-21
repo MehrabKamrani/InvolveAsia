@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Involve Asia</title>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+      <div class="main">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-orange add-revenue-btn" data-toggle="modal" data-target="#addRevenue">
+            Add Revenue
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="addRevenue" tabindex="-1" role="dialog" aria-labelledby="addRevenueLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addRevenueLabel">Add Revenue Group</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form id="revenueForm">
+                    <div class="modal-body px-0">
+                        <div class="form-group px-3">
+                            <label for="title" class="col-form-label">Revenue Group Title</label>
+                            <input required type="text" class="form-control" id="title" placeholder="e.g. Fashion - 15%">
+                        </div>
+                        <div class="form-group px-3">
+                            <div class="form-inline">
+                                <label for="conditions" class="mr-2 mb-0">If</label>
+                                <div class="mr-2">
+                                    <select class="form-control" name="conditions" id="conditions" required>
+                                        <option value="all" selected>ALL</option>
+                                        <option value="option2">Option 2</option>
+                                        <option value="option3">Option 3</option>
+                                        <option value="option4">Option 4</option>
+                                    </select>
+                                </div>
+                                <label for="conditions" class="mb-0">of the below conditions are met</label>
+                            </div>
+                        </div>
+                        <div class="rule-section my-5">
+                            <div class="parameter-section py-3 px-3">
+                                <h6 class="rule-number-header"></h6>
+                                <div class="form-row">
+                                    <div class="col-sm-2 py-1 py-sm-0">
+                                        <select class="form-control form-control-sm" required>
+                                            <option value="aff_sub" selected>aff_sub</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                            <option value="option4">Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2 py-1 py-sm-0">
+                                        <select class="form-control form-control-sm" required>
+                                            <option value="is" selected>is</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                            <option value="option4">Option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-8 py-1 py-sm-0 pr-0 form-row">
+                                        <div class="input-group col-10">
+                                            <input required type="text" class="form-control form-control-sm pr-0" placeholder="insert parameter">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm rule-addon-btn add" type="button"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-right px-0">
+                                            <a href="javascript:void(0);" class="add-rule-field-btn btn btn-sm btn-outline-primary"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group px-3">
+                            <div class="form-inline">
+                                <label for="revenue" class="mr-2 mb-0">Then revenue is</label>
+                                <input required type="number" min="0" max="100" id="revenue" class="form-control revenue-percentage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-orange confirm-btn">Confirm</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+  </body>
+</html>
